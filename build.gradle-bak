@@ -1,0 +1,143 @@
+plugins {
+    id "com.github.lkishalmi.gatling" version "3.2.9"
+}
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'scala'
+
+//sourceSets {
+//    gatling {
+//        scala.srcDirs "test/gatling/simulation"
+//        resources.srcDirs "test/gatling/resources"
+//    }
+//    compileClasspath += configurations.gatling
+//}
+//
+//gatling {
+//    simulations = {
+//        include "**/test/gatling/simulation/*.*"
+//    }
+//}
+
+//dependencies {
+//    testCompile 'org.scala-lang:scala-library:2.11.8'
+//    testCompile 'io.gatling.highcharts:gatling-charts-highcharts:3.2.9'
+//}
+
+task sourceSetDetails {
+    doLast {
+        sourceSets {
+            main {
+                println java.properties
+                println resources.properties
+            }
+            test {
+                println java.properties
+                println resources.properties
+            }
+        }
+    }
+}
+
+
+
+sourceSets {
+    simulations {
+        scala {
+            srcDirs = ['test/gatling/simulation']
+        }
+        resources {
+            srcDirs = ['test/gatling//resources']
+        }
+    }
+//    compileClasspath += configurations.gatling
+}
+
+//configurations {
+//    gatling
+//}
+
+dependencies {
+    simulationsCompile 'org.scala-lang:scala-library:2.11.8'
+    simulationsCompile 'io.gatling.highcharts:gatling-charts-highcharts:2.2.5'
+}
+
+task showConfigurations  {
+    doLast {
+        configurations.all { conf -> println(conf) }
+    }
+}
+
+
+//task gatlingRun(type: JavaExec) {
+//    description = 'Run gatling tests'
+//    new File("${buildDir}/reports/gatling").mkdirs()
+//    classpath = sourceSets.simulations.runtimeClasspath + configurations.gatling
+//    main = "io.gatling.app.Gatling"
+//    args = ['-s', 'simulation.BasicSimulation',
+//            '-sf', 'simulations/resources',
+//            '-df', 'simulations/resources',
+//            '-rf', "${buildDir}/reports/gatling"
+//    ]
+//}
+
+group 'com.pfernand'
+version '1.0-SNAPSHOT'
+
+
+//plugins {
+//    id "io.oneclicklabs.gatling" version "1.0.1"
+//}
+//
+//apply plugin: 'java'
+//apply plugin: 'scala'
+//apply plugin: "io.oneclicklabs.gatling"
+//
+//jar {
+//    baseName = 'gatling-load-testing-demo'
+//    version = '0.0.1-SNAPSHOT'
+//}
+//
+//repositories {
+//    mavenCentral()
+//    jcenter()
+//}
+//
+//
+//dependencies {
+//    performanceTest "io.gatling.highcharts:gatling-charts-highcharts:2.2.3"
+//    performanceTest "io.gatling:gatling-app:2.2.3"
+//    performanceTest "io.gatling:gatling-core:2.2.3"
+//    performanceTest "io.gatling:gatling-http:2.2.3"
+//
+//}
+//
+//sourceSets {
+//    perfTest {
+//        scala {
+//            srcDirs = ["src/performanceTest/scala"]
+//        }
+//    }
+//}
+//
+//task performanceTestCompile(type: org.gradle.api.tasks.scala.ScalaCompile) {
+//    source = sourceSets.perfTest.scala.srcDirs
+//    destinationDir = sourceSets.perfTest.output.classesDir
+//    classpath = configurations.performanceTest
+//}
+//
+//task perfTestGoogle(type: io.oneclicklabs.gatling.gradle.plugin.PerfTestTask, dependsOn: [performanceTestCompile]) {
+//    warmUpURL = "http://www.google.com"
+//    simulationClass = "io.oneclicklabs.gatling.demo.GooglePerfTest"
+//    simulationClassesFolder = "${project.buildDir}/classes/perfTest"
+//}
+//
+//task perfSuite(type: io.oneclicklabs.gatling.gradle.plugin.PerfTestTask, dependsOn: [performanceTestCompile]) {
+//    warmUpURL = "http://www.google.com"
+//    sysProperties = ["-Dcomcast.extra=CheckThis"]
+//    simulationClassesFolder = "${project.buildDir}/classes/perfTest"
+//    simulationClass = ["io.oneclicklabs.gatling.demo.GooglePerfTest"]
+//}

@@ -1,0 +1,12 @@
+products:
+   /Users/paulofernandes/Documents/dev/pfernand/pf-perf-tests/test/gatling/simulation/BasicSimulation.scala -> /Users/paulofernandes/Documents/dev/pfernand/pf-perf-tests/build/classes/scala/simulations/simulation/BasicSimulation.class
+binary dependencies:
+   /Users/paulofernandes/Documents/dev/pfernand/pf-perf-tests/test/gatling/simulation/BasicSimulation.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar
+   /Users/paulofernandes/Documents/dev/pfernand/pf-perf-tests/test/gatling/simulation/BasicSimulation.scala -> /Users/paulofernandes/.gradle/caches/modules-2/files-2.1/io.gatling/gatling-commons/2.2.4/ab45ed6641185b93da05a670676f1a48c96dc0a6/gatling-commons-2.2.4.jar
+   /Users/paulofernandes/Documents/dev/pfernand/pf-perf-tests/test/gatling/simulation/BasicSimulation.scala -> /Users/paulofernandes/.gradle/caches/modules-2/files-2.1/io.gatling/gatling-core/2.2.4/b5061e884f31cbdc804af57a1101ecefe846d5c/gatling-core-2.2.4.jar
+   /Users/paulofernandes/Documents/dev/pfernand/pf-perf-tests/test/gatling/simulation/BasicSimulation.scala -> /Users/paulofernandes/.gradle/caches/modules-2/files-2.1/io.gatling/gatling-http/2.2.4/28831f7c5784c6caf7214e4b91e0ad83bf2b702/gatling-http-2.2.4.jar
+   /Users/paulofernandes/Documents/dev/pfernand/pf-perf-tests/test/gatling/simulation/BasicSimulation.scala -> /Users/paulofernandes/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.8/ddd5a8bced249bedd86fb4578a39b9fb71480573/scala-library-2.11.8.jar
+source dependencies:
+external dependencies:
+class names:
+   /Users/paulofernandes/Documents/dev/pfernand/pf-perf-tests/test/gatling/simulation/BasicSimulation.scala -> simulation.BasicSimulation

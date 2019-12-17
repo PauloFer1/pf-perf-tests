@@ -1,0 +1,4 @@
+RUN	simulation.BasicSimulation		basicsimulation	1576542774585	 	2.0
+USER	Basic Simulation	1	START	1576542775331	1576542775331
+REQUEST	Basic Simulation	1		request_1	1576542775360	1576542775402	KO	status.find.in(200,304,201,202,203,204,205,206,207,208,209), but actually found 410
+USER	Basic Simulation	1	END	1576542775331	1576542780426
